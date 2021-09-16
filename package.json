@@ -14,6 +14,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "react-scripts": "4.0.3",
+    "styled-components": "^5.3.1",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
@@ -24,7 +25,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "builds": "rollup -c"
+    "builds": "rollup -c",
+    "chromatic": "npx chromatic --project-token=a002e65de19a"
   },
   "eslintConfig": {
     "extends": [
