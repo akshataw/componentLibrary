@@ -2,20 +2,21 @@ import React from "react";
 
 export interface TaskProps {
     id?: number;
-    backgroundColor?: string;
     title?: string;
-    state?: boolean;
+    state?: string;
 };
 
 const Task = ({
-    state = false,
-    backgroundColor,
+    state = 'TASK_INBOX',
     title = "Learn React",
     id,
 }: TaskProps) => {
     return (
-        <div className="list-item">
-            { id }<input type="text" value={title} style={backgroundColor ? { backgroundColor } : {}} readOnly={true} />
+        <div className={`list-item ${state}`}>
+            <div className="title">
+                <input type="checkbox" defaultChecked={state === 'TASK_ARCHIVED'} disabled={true} name="checked" />
+                <input type="text" value={title} readOnly={true} placeholder="Input title" />
+            </div>
         </div>
     )
 };

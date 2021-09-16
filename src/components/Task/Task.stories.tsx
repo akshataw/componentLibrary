@@ -6,9 +6,6 @@ import Task, { TaskProps } from "./Task";
 export default {
     title: "Components/Task",
     component: Task,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
 } as Meta;
 
 const Template: Story<TaskProps> = (args) => <Task {...args} />;
@@ -17,22 +14,19 @@ export const Default = Template.bind({});
 Default.args = {
     id: 1,
     title: 'Explore React',
-    state: false,
-    backgroundColor: 'white',
+    state: 'TASK_INBOX',
 };
 
-export const CompletedTask = Template.bind({});
-CompletedTask.args = {
+export const PinnedTask = Template.bind({});
+PinnedTask.args = {
     id: 1,
     title: 'Explore React',
-    state: true,
-    backgroundColor: 'green',
+    state: 'TASK_PINNED',
 };
 
-export const ExtendedTask = Template.bind({});
-ExtendedTask.args = {
+export const ArchivedTask = Template.bind({});
+ArchivedTask.args = {
     id: 1,
     title: 'Explore React',
-    state: false,
-    backgroundColor: 'red',
+    state: 'TASK_ARCHIVED',
 };
