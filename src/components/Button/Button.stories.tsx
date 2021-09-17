@@ -11,7 +11,7 @@ export default {
     },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args: JSX.IntrinsicAttributes & ButtonProps) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = { label: 'Primary Button', size: "large" };
@@ -21,3 +21,6 @@ Secondary.args = { ...Primary.args, primary: false, label: "Secondary Button" };
 
 export const Danger = Template.bind({});
 Danger.args = { label: 'Danger Button', size: "medium", primary: false, backgroundColor: "red" };
+
+export const Success = Template.bind({});
+Success.args = { label: 'Success Button', size: "medium", primary: false, backgroundColor: "green" };
