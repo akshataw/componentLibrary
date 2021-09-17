@@ -30,6 +30,9 @@
     "builds": "rollup -c",
     "chromatic": "npx chromatic --project-token=a002e65de19a"
   },
+  "files": [
+    "/lib"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",

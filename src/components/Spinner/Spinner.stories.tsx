@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Spinner, { SpinnerProps } from '.';
+import Spinner, { SpinnerProps } from './Spinner';
 import styled from 'styled-components';
 
 export default {
@@ -9,7 +9,7 @@ export default {
     component: Spinner,
 } as Meta;
 
-const Template: Story<SpinnerProps> = (args) => <Spinner {...args} />;
+const Template: Story<SpinnerProps> = (args: JSX.IntrinsicAttributes & SpinnerProps & React.RefAttributes<HTMLDivElement>) => <Spinner {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

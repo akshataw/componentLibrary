@@ -15,8 +15,8 @@ jobs:
       - name: Installation
         run: npm install
       
-      - name: Print working directory
-        run: pwd
+      - name: Build packages
+        run: npm run build
 
       - name: Build Storybook
         run: npm run build-storybook

@@ -8,7 +8,7 @@ export default {
     component: Task,
 } as Meta;
 
-const Template: Story<TaskProps> = (args) => <Task {...args} />;
+const Template: Story<TaskProps> = (args: JSX.IntrinsicAttributes & TaskProps) => <Task {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
